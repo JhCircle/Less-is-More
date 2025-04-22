@@ -1,32 +1,44 @@
 <h1 align="center">🧠 Less is More: Enhancing Structured Multi-Agent Reasoning via Quality-Guided Distillation</h1>
+<p align="center"> 🎉 Third-place solution to the <strong>XLLM@ACL2025 Shared Task-III</strong>: <em>LLM for Structural Reasoning</em> 🏆 </p>
 <p align="center">
   <img src="./asset/less_is_more.png" width="30%" alt="Less is More: Structured Reasoning Framework"/>
+</p>
+
 
 ---
 
-</p>
 <p align="center">
 ⭐ If you find this project helpful, please consider giving us a star to support the latest updates.
 </p>
 
 ---
-This repository provides the full implementation of our multi-agent structured reasoning framework, which distills high-quality step-by-step reasoning data into modular role agents. It is designed to help machines better understand, explain, and verify logic-based questions using structured instruction-following.
+## 🔍 Overview
+This repository provides the full implementation of our Less is More framework, which distills high-quality structured reasoning data into multi-agent LLaMA-3 modules. It addresses low-resource structured reasoning by combining:
 
+- 🧠 [Reverse-prompted](https://arxiv.org/pdf/2410.12323) task induction
+
+- 🔍 [Retrieval-augmented](https://aclanthology.org/2023.tacl-1.75/) CoT generation
+
+- 🏆 Reward-guided filtering for faithful and interpretable supervision
 ---
 
 ## 🚀 Highlights
 
-- 🎯 **Modular Role Agents**: Specialized LLaMA-3 agents for parsing, statement extraction, evidence retrieval, and verification.
-- 🔍 **Similarity-based Few-shot Demo Selection**: Retrieve top-k demos via embedding search (BGE-M3).
-- 🏆 **Reward-Guided CoT Selection**: Filter out low-quality reasoning using a trained reward model.
-- 🔧 **LoRA Efficient Fine-tuning**: Fast and lightweight training for each role agent.
-- 🧱 **Fully Structured Output**: Easily used for further training, prompting, or evaluation.
+- 🧩 **Modular Agents**: Specialized models for question parsing, CoT decomposition, and verification
 
+- 🔍 **Semantic ICL Retrieval**: Top-k demos fetched via [BGE-M3](https://huggingface.co/BAAI/bge-m3) embeddings
+
+- 🎯 **Reward Filtering**: [LLaMA3 reward](https://huggingface.co/Ray2333/GRM-Llama3.2-3B-rewardmodel-ft) model filters reasoning quality
+
+- ⚡ **LoRA+ Fine-tuning**: Efficient SFT on each role using [ms-swift](https://github.com/modelscope/ms-swift)
+
+- 📊 **Structured Output**: JSON-compatible format for downstream use
 ---
 
 ## 📦 Installation
 
 ```bash
+cd Less-is-More
 pip install -r requirements.txt
 ```
 
@@ -64,7 +76,7 @@ pip install -r requirements.txt
 
 ## 🛠️ How to Run
 
-### 1️⃣ Step 1: Data Synthesis
+### 1️⃣ Step 1: 🧠 Data Synthesis
 Generate high-quality Question Parsing (QP), Chain-of-Thought Parsing (CP), and CoT Verification (CV: including both statement extraction and logical validation) from raw [LogicQA](https://github.com/lgw863/LogiQA-dataset) questions using GPT-4o via Retrieval-Augmented In-Context Learninig.
 ```bash
 python data_synthesize.py \
@@ -80,7 +92,7 @@ python data_synthesize.py \
 
 ---
 
-### 2️⃣ Step 2: Score Quality with Reward Model
+### 2️⃣ Step 2: 🏆 Reward Filtering
 Use a reward model to evaluate CoT quality and retain only samples with **reward > 0**.
 
 ```bash
@@ -103,7 +115,7 @@ Generates:
 
 ---
 
-### 3️⃣ Step 3: Extract Role-Based Instruction Data
+### 3️⃣ Step 3: 📊 Extract Role Data
 Convert filtered CoT data into structured instruction formats for each role. Each file is used to train a different role agent (QP / CP / CV).
 ```bash
 python scripts/extract_train_role.py
@@ -120,7 +132,7 @@ data/train/{strategy}/training_cot_verify_role.jsonl
 
 ---
 
-### 4️⃣ Step 4: Fine-tune Role Agents via LoRA+
+### 4️⃣ Step 4: 🧬 Fine-Tune Role Agents (QP / CP / CV)
 Train each role agent (Question Parsing / CoT Parsing / CoT Verify) using reward-filtered data.
 ```bash
 bash train_qp.sh
@@ -143,7 +155,7 @@ strategy="average"
 
 ---
 
-### 5️⃣ Step 5: Run Multi-Agent Inference
+### 5️⃣ Step 5: Multi-Agent Structured Inference
 Use the trained role agents to perform structured reasoning on new questions.
 
 ```bash
@@ -205,6 +217,19 @@ Produces `results.json` in the following structure:
 
 ---
 
+## 🏁 Evaluation
+
+| Setting              | Question_F1 | Statement_F1 | Evidence_F1 | Reasoning_F1 |
+|:--------------------:|:-----------:|:------------:|:-----------:|:------------:|
+| Structure Filtered   |  56.87      |    36.72     |   10.80     |    5.20      |
+| 0-shot Reward        |  62.76      |    38.05     |   12.79     |    7.15      |
+| 5-shot Reward        |  65.89      |    38.26     |   14.45     |    7.70      |
+| 🥇 Avg. Reward (Ours) | **66.71**   |  **39.21**   | **14.92**   |  **8.98**    |
+
+---
+
 ## 📬 Contact
 
-For any questions, suggestions, or collaborations, feel free to open an issue or start a discussion.
+For any questions, suggestions, or collaborations, feel free to open an issue or start a discussion in the community. We'd 💖 to hear from you and are always open to feedback or collaboration ideas!
+
+---
