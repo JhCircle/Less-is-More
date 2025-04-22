@@ -1,0 +1,847 @@
+[
+    {
+        "question": "There are 7 outstanding students G, H, L, M, U, W and Z in a school.During the summer vacation, the school will send them to the United Kingdom and the United States for inspection.The school has only 7 students participating in this activity, and each person happens to go to one of these two countries.Considering the specialty of each student, this activity must meet the following conditions? (1) If G goes to the UK, then H To the United States.(2) If L goes to the UK, both M and U go to the US.(3) The country W went to was different from the country Z went to.(4) The country where U goes is different from the country where G goes.(5) If Z goes to the UK, then H also goes to the UK.\nIf G goes to the United States, which of the following must be true?\nA.H go to the UK\nB.L go to America\nC.M go to the UK\nD.W go to America",
+        "question_parsing": [
+            "The school has only 7 students participating in this activity, and each person happens to go to one of these two countries",
+            "If G goes to the UK, then H To the United States",
+            "If L goes to the UK, both M and U go to the US",
+            "The country W went to was different from the country Z went to",
+            "The country where U goes is different from the country where G goes",
+            "If Z goes to the UK, then H also goes to the UK",
+            "G goes to the United States"
+        ],
+        "answer": "b",
+        "id": 162,
+        "cot": "Since G goes to the United States, we need to analyze the conditions that follow. Condition (1) is not applicable since G is going to the US. Condition (2) is also not applicable since L's destination is not specified. Condition (3) does not provide any information about H, M, U, or W. Condition (4) states that U's destination is different from G's, which is the US, so U must go to the UK. Condition (5) is not applicable since Z's destination is not specified.",
+        "cot_parsing": [
+            {
+                "statement": "Condition (1) is not applicable",
+                "evidence": "G is going to the US",
+                "Verification": "true"
+            },
+            {
+                "statement": "Condition (2) is also not applicable",
+                "evidence": "L's destination is not specified",
+                "Verification": "true"
+            },
+            {
+                "statement": "Condition (3) does not provide any information about H, M, U, or W",
+                "evidence": "Condition (3)",
+                "Verification": "false"
+            },
+            {
+                "statement": "U must go to the UK",
+                "evidence": "Condition (4) states that U's destination is different from G's, which is the US",
+                "Verification": "true"
+            },
+            {
+                "statement": "Condition (5) is not applicable",
+                "evidence": "Z's destination is not specified",
+                "Verification": "true"
+            }
+        ],
+        "sel_idx": 92
+    },
+    {
+        "question": "There are 6 clear flower porcelains: S, Y, M, Q, K, X.The production time of each piece is different.From left to right, the exhibitions are sorted in order from the earliest to the latest.The known sorting conditions are as follows: (1) M is older than X.(2) If Y is earlier than M, then Q is earlier than K and X.(3) If the age of M is earlier than Y, the age of K is earlier than Q and X.(4) The age of S is either earlier than Y or earlier than M, and both have neither.\nWhich of the following lists the possible exhibition order?\nA.Q.M.S, K.Y.X\nB.Q, K.Y, M.X, S\nC.Y.S, M.X.Q, K\nD.M, K, S, Q, Y, X",
+        "question_parsing": [
+            "From left to right, the exhibitions are sorted in order from the earliest to the latest",
+            "M is older than X",
+            "If Y is earlier than M, then Q is earlier than K and X",
+            "If the age of M is earlier than Y, the age of K is earlier than Q and X",
+            "The age of S is either earlier than Y or earlier than M, and both have neither"
+        ],
+        "answer": "d",
+        "id": 374,
+        "cot":"Let's analyze the given conditions:\n\n1. M is older than X.\n2. If Y is earlier than M, then Q is earlier than K and X.\n3. If M is earlier than Y, then K is earlier than Q and X.\n4. The age of S is either earlier than Y or earlier than M, and both have neither.\n\nFrom condition 1, we know M is older than X.\n\nFrom condition 2, if Y is earlier than M, then Q is earlier than K and X. This means that if Y is earlier than M, the order is Y, M, Q, K, X.\n\nFrom condition 3, if M is earlier than Y, then K is earlier than Q and X. This means that if M is earlier than Y, the order is M, K, Q, X.\n\nFrom condition 4, the age of S is either earlier than Y or earlier than M, and both have neither. This means that S can be placed anywhere in the sequence, but it cannot be placed between Y and M.",
+        "cot_parsing": [
+            {
+                "statement":"if Y is earlier than M, the order is Y, M, Q, K, X",
+                "evidence":"From condition 2, if Y is earlier than M, then Q is earlier than K and X",
+                "Verification":"false"
+            },
+            {
+                "statement":"if M is earlier than Y, the order is M, K, Q, X.",
+                "evidence":"From condition 3, if M is earlier than Y, then K is earlier than Q and X",
+                "Verification":"false"
+            },
+           {
+                "statement":"S can be placed anywhere in the sequence, but it cannot be placed between Y and M",
+                "evidence":"From condition 4, the age of S is either earlier than Y or earlier than M, and both have neither",
+                "Verification":"false"
+           }
+        ],
+        "sel_idx": 89
+    },
+    {
+        "question": "In a magic show, from the seven magicians-G.H.K.L.N.P and Q, choose 6 people to play, and the performance is divided into two teams: 1 team and 2 teams.Each team consists of three positions: front, middle, and back.The magicians on the field happen to occupy one position each.The choice and location of the magician must meet the following conditions: (1) If G or H is arranged to play, they must be in the front.(2) If K is scheduled to play, he must be in the middle.(3) If L is scheduled to play, he must be on team 1.(4) Neither P nor K can be in the same team as N.(5) P cannot be in the same team as Q.(6) If H is in team 2, Q is in the middle of team 1.\nWhich of the following is an acceptable arrangement for the first team's performance?\nA.Before: Q, In: L, After: N\nB.Before: L, Middle: K, After: Q\nC.Before: Q, In: K, After: P\nD.Before: G, In: K, After: P",
+        "question_parsing": [
+            "In a magic show, from the seven magicians-G.H.K.L.N.P and Q, choose 6 people to play, and the performance is divided into two teams: 1 team and 2 teams",
+            "Each team consists of three positions: front, middle, and back",
+            "The magicians on the field happen to occupy one position each",
+            "If G or H is arranged to play, they must be in the front",
+            "If K is scheduled to play, he must be in the middle",
+            "If L is scheduled to play, he must be on team 1",
+            "Neither P nor K can be in the same team as N",
+            "P cannot be in the same team as Q",
+            "If H is in team 2, Q is in the middle of team 1"
+        ],
+        "answer": "a",
+        "id": 476,
+        "cot": "Let's analyze the conditions given:\n\n1. If G or H is arranged to play, they must be in the front.\n2. If K is scheduled to play, he must be in the middle.\n3. If L is scheduled to play, he must be on team 1.\n4. Neither P nor K can be in the same team as N.\n5. P cannot be in the same team as Q.\n6. If H is in team 2, Q is in the middle of team 1.\n\nWe need to find an acceptable arrangement for the first team's performance, which consists of three positions: front, middle, and back. Let's try to find a possible arrangement for the first team's performance. We can start by considering the conditions one by one.\n\nFrom condition 1, we know that if G or H is arranged to play, they must be in the front. Let's assume G is in the front.\n\nFrom condition 3, we know that if L is scheduled to play, he must be on team 1. Since L is not in the front, he must be in the middle or back. Let's assume L is in the middle.\n\nFrom condition 2, we know that if K is scheduled to play, he must be in the middle. Since L is already in the middle, K cannot be in the middle. Therefore, K must be in the back.\n\nFrom condition 4, we know that neither P nor K can be in the same team as N. Since K is in the back, P cannot be in the back. Therefore, P must be in the front or middle. However, P cannot be in the same team as Q, so P cannot be in the same team as L. Therefore, P must be in the front.\n\nFrom condition 6, we know that if H is in team 2, Q is in the middle of team 1. Since G is already in the front, H cannot be in team 1. Therefore, H must be in team 2.\n\nNow we have a possible arrangement for the first team's performance:\n\nFront: G, P\nMiddle: L\nBack: K\n\nPlease proceed to the next step",
+        "cot_parsing": [
+            {
+                "statement": "he must be in the middle or back",
+                "evidence": "From condition 1, we know that if G or H is arranged to play, they must be in the front. Let's assume G is in the front.\n\nFrom condition 3, we know that if L is scheduled to play, he must be on team 1. Since L is not in the front",
+                "Verification": "false"
+            },
+            {
+                "statement": "K must be in the back",
+                "evidence": "From condition 2, we know that if K is scheduled to play, he must be in the middle. Since L is already in the middle, K cannot be in the middle.",
+                "Verification": "false"
+            },
+            {
+                "statement": "P cannot be in the back",
+                "evidence": "From condition 4, we know that neither P nor K can be in the same team as N. Since K is in the back",
+                "Verification": "false"
+            },
+            {
+                "statement": "P must be in the front or middle",
+                "evidence": "From condition 4, we know that neither P nor K can be in the same team as N. Since K is in the back, P cannot be in the back.",
+                "Verification": "false"
+            },
+            {
+                "statement": "P cannot be in the same team as L",
+                "evidence": "P cannot be in the same team as Q",
+                "Verification": "false"
+            },
+            {
+                "statement": "P must be in the front",
+                "evidence": "From condition 4, we know that neither P nor K can be in the same team as N. Since K is in the back, P cannot be in the back. Therefore, P must be in the front or middle. However, P cannot be in the same team as Q, so P cannot be in the same team as L.",
+                "Verification": "false"
+            },
+            {
+                "statement": "H must be in team 2",
+                "evidence": "From condition 6, we know that if H is in team 2, Q is in the middle of team 1. Since G is already in the front, H cannot be in team 1.",
+                "Verification": "false"
+            }
+        ],
+        "sel_idx": 95
+    },
+    {
+        "question": "Three Chinese students Zhang Lin, Zhao Qiang, Li Shan and three foreign students John, Jesse, and Anna went on a summer vacation.Alternative tourist destinations include Xi'an, Hangzhou, Dalian and Zhangjiajie.It is already known that: (1) each person can only go to one place; (2) wherever Chinese students go, foreign students must go; (3) where there are foreign students, Chinese students must go; (4) John went to Xi'an or Hangzhou, and Zhao Qiang went to Zhangjiajie.\nIf the conclusion of the question is true, which two people cannot go to Hangzhou at the same time?\nA.Zhang Lin and Li Shan\nB.Li Shan and Anna\nC.Jesse and Anna\nD.Zhang Lin and Jessie",
+        "question_parsing": [
+            "Three Chinese students Zhang Lin, Zhao Qiang, Li Shan and three foreign students John, Jesse, and Anna went on a summer vacation",
+            "each person can only go to one place",
+            "wherever Chinese students go, foreign students must go",
+            "where there are foreign students, Chinese students must go",
+            "John went to Xi'an or Hangzhou, and Zhao Qiang went to Zhangjiajie"
+        ],
+        "answer": "c",
+        "id": 208,
+        "cot": "Since it is known that (2) wherever Chinese students go, foreign students must go, and (3) where there are foreign students, Chinese students must go, we can conclude that if a Chinese student goes to a destination, a foreign student must also go to the same destination. We are also given that John went to Xi'an or Hangzhou, and Zhao Qiang went to Zhangjiajie. This means that if John went to Xi'an, Zhao Qiang must have gone to Zhangjiajie, and if John went to Hangzhou, Zhao Qiang must have gone to Zhangjiajie. Since Zhang Lin and Li Shan are Chinese students, they cannot both go to Hangzhou if John went to Hangzhou, because Zhao Qiang would have to go to Zhangjiajie, and there would be no foreign students left to go to Hangzhou. Similarly, if John went to Xi'an, Zhang Lin and Li Shan cannot both go to Hangzhou, because Zhao Qiang would have to go to Zhangjiajie, and there would be no Chinese students left to go to Hangzhou. Therefore, Zhang Lin and Li Shan cannot go to Hangzhou at the same time.",
+        "cot_parsing": [
+            {
+                "statement": "if a Chinese student goes to a destination, a foreign student must also go to the same destination",
+                "evidence": "(2) wherever Chinese students go, foreign students must go, and (3) where there are foreign students, Chinese students must go",
+                "Verification": "true"
+            },
+            {
+                "statement": "if John went to Xi'an, Zhao Qiang must have gone to Zhangjiajie, and if John went to Hangzhou, Zhao Qiang must have gone to Zhangjiajie",
+                "evidence": "John went to Xi'an or Hangzhou, and Zhao Qiang went to Zhangjiajie.",
+                "Verification": "false"
+            },
+            {
+                "statement": "Zhang Lin and Li Shan cannot both go to Hangzhou if John went to Hangzhou",
+                "evidence": "Zhang Lin and Li Shan are Chinese students, Zhao Qiang would have to go to Zhangjiajie, and there would be no foreign students left to go to Hangzhou",
+                "Verification": "false"
+            },
+            {
+                "statement": "if John went to Xi'an, Zhang Lin and Li Shan cannot both go to Hangzhou",
+                "evidence": "Zhao Qiang would have to go to Zhangjiajie, and there would be no Chinese students left to go to Hangzhou",
+                "Verification": "false"
+            }
+        ],
+        "sel_idx": 97
+    },
+    {
+        "question": "Seven people from G, H, J, K, L, M and O traveled together.In their 4-day camping life, two people are scheduled to cook for everyone every day.It is required that the four-day staff arrangement cannot be repeated, and there is exactly one person on duty for two days.In addition, the duty arrangement must also meet the following conditions? (1) J should be placed on the next day of duty H.(2) The person on duty for two days must be on the fourth day, not the third day.(3) G must be on the same day as one of J and O.(4) Arrange K at least one day on the first or second day.(5) O must be on the third day.\nWhich of the following people can't be on duty for two days?\nA.G\nB.H\nC.K\nD.L",
+        "question_parsing": [
+            "In their 4-day camping life, two people are scheduled to cook for everyone every day",
+            "It is required that the four-day staff arrangement cannot be repeated",
+            "there is exactly one person on duty for two days",
+            "J should be placed on the next day of duty H", 
+            "The person on duty for two days must be on the fourth day, not the third day",
+            "G must be on the same day as one of J and O",
+            "Arrange K at least one day on the first or second day",
+            "O must be on the third day."
+        ],
+        "answer": "a",
+        "id": 54,
+        "cot": "Let's analyze the given conditions. We know that the duty arrangement cannot be repeated, and there is exactly one person on duty for two days. We also know that J should be placed on the next day of duty H, and G must be on the same day as one of J and O. Additionally, O must be on the third day, and K must be on at least one day on the first or second day.\n\nFrom condition (2), we know that the person on duty for two days must be on the fourth day, not the third day. This means that the person on duty for two days cannot be O, since O is already on the third day.\n\nFrom condition (3), we know that G must be on the same day as one of J and O. Since O is on the third day, G must be on the same day as J. This means that G and J are on the same day, and G is not on duty for two days.",
+        "cot_parsing": [
+            {
+                "statement":"the person on duty for two days cannot be O, ",
+                "evidence":"The person on duty for two days must be on the fourth day, not the third day. since O is already on the third day.",
+                "Verification":"true"
+            },
+            {
+                "statement":"G must be on the same day as J.",
+                "evidence":"O is on the third day, G must be on the same day as one of J and O.",
+                "Verification":"false"
+            },
+           {
+                "statement":"G and J are on the same day, and G is not on duty for two days.",
+                "evidence":"O is on the third day, G must be on the same day as J.",
+                "Verification":"false"
+           }
+        ],
+        "sel_idx": 84
+    },
+    {
+        "question": "A provincial Go team coach selects 4 of the 7 players from E, F, G, H, J, K and M to participate in the professional league.The selection must meet the following conditions: E or F has one person to participate, but not both .One of J or K will participate, but not both.If J participates, then G participates.Unless F participates, M does not participate.\nWhich of the following players will definitely participate in the game?\nA.F or M, or both.\nC.H or J, or both.\nB.G or H, or both.\nD.J or M, or both.",
+        "question_parsing": [
+            "A provincial Go team coach selects 4 of the 7 players from E, F, G, H, J, K and M to participate in the professional league.",
+            "E or F has one person to participate, but not both",
+            "One of J or K will participate, but not both",
+            "If J participates, then G participates",
+            "Unless F participates, M does not participate"
+        ],
+        "answer": "b",
+        "id": 100,
+        "cot": "Let's analyze the conditions given:\n\n1. E or F has one person to participate, but not both.\n2. One of J or K will participate, but not both.\n3. If J participates, then G participates.\n4. Unless F participates, M does not participate.\n\nFrom condition 1, we know that either E or F will participate, but not both. Let's consider the possibilities:\n\n* If E participates, then F cannot participate (by condition 1). But condition 4 says that unless F participates, M does not participate. So, if E participates, M must participate.\n* If F participates, then E cannot participate (by condition 1). In this case, condition 4 does not apply, and we don't know if M will participate.\n\nFrom condition 2, we know that one of J or K will participate, but not both. Let's consider the possibilities:\n\n* If J participates, then G participates (by condition 3). In this case, K cannot participate (by condition 2).\n* If K participates, then J cannot participate (by condition 2). We don't know if G will participate.\n\nNow, let's combine the possibilities:\n\n* If E participates, then M participates, and J or K participates (but not both).\n* If F participates, then J or K participates (but not both), and we don't know if M participates.",
+        "cot_parsing": [
+            {
+                "statement": "if E participates, M must participate",
+                "evidence": "If E participates, then F cannot participate (by condition 1). But condition 4 says that unless F participates, M does not participate.",
+                "Verification": "false"
+            },
+            {
+                "statement": "condition 4 does not apply, and we don't know if M will participate",
+                "evidence": "If F participates, then E cannot participate (by condition 1)",
+                "Verification": "true"
+            },
+            {
+                "statement": "We don't know if G will participate",
+                "evidence": "If J participates, then G participates (by condition 3). In this case, K cannot participate (by condition 2).\n* If K participates, then J cannot participate (by condition 2)",
+                "Verification": "false"
+            },
+            {
+                "statement": "In this case, K cannot participate ",
+                "evidence": "From condition 2, one of J or K will participate, but not both. Let's consider the possibilities:\n\n* If J participates, then G participates (by condition 3)",
+                "Verification": "true"
+            },
+            {
+                "statement": "J or K participates (but not both), and we don't know if M participates",
+                "evidence": "If E participates, then M participates, and J or K participates (but not both).\n* If F participates",
+                "Verification": "false"
+            }
+        ],
+        "sel_idx": 96
+    },
+    {
+        "question": "The members of the printing group and the binding group are mainly from the following seven employees-F, G, H, J, K, L and M.The members of each group must meet the following conditions? (1) Each group has at least 3 employees .(2) F and K cannot be in the same group.(3) If K is in a certain group, J must also be in this group.(4) M is at least one of the members of these two groups.(5) At least one of the same employees in both groups.\nHow many employees can be a member of printing group and binding group at most?\nA.4\nB.5\nC.6\nD.7",
+        "question_parsing": [
+            "The members of the printing group and the binding group are mainly from the following seven employees-F, G, H, J, K, L and M.",
+            "Each group has at least 3 employees.",
+            "F and K cannot be in the same group.",
+            "If K is in a certain group, J must also be in this group.",
+            "M is at least one of the members of these two groups.",
+            "At least one of the same employees in both groups."
+        ],
+        "answer": "c",
+        "id": 175,
+        "cot": "Let's analyze the conditions given:\n\n1. Each group has at least 3 employees.\n2. F and K cannot be in the same group.\n3. If K is in a certain group, J must also be in this group.\n4. M is at least one of the members of these two groups.\n5. At least one of the same employees in both groups.\n\nFrom condition 2, we know F and K cannot be in the same group. From condition 3, if K is in a group, J must also be in that group. This means K and J are in the same group.",
+        "cot_parsing": [
+            {
+                "statement": "From condition 2, we know F and K cannot be in the same group.",
+                "evidence": "condition 2",
+                "Verification": "true"
+            },
+            {
+                "statement": "K and J are in the same group.",
+                "evidence": "From condition 3, if K is in a group, J must also be in that group",
+                "Verification": "true"
+            }
+        ],
+        "sel_idx": 66
+    },
+    {
+        "question": "A company has a 6-story office building.The company's finance department, planning department, administration department, sales department, human resources department, and research and development department work here, and each department occupies one of the floors.Known? (1) The two floors of the human resources department and the sales department are not adjacent; (2) The finance department is on the next floor of the planning department; (3) The floor of the administrative department is above the planning department, but in the manpower Below the Resources Department.\nIf the human resources department is not on the top floor, the floors that the R & D department may be on are?\nA.3, 4, 6\nB.3, 4, 5\nC.4, 5\nD.5, 6",
+        "question_parsing": [
+            "A company has a 6-story office building.",
+            "The company's finance department, planning department, administration department, sales department, human resources department, and research and development department work here, and each department occupies one of the floors.",
+            "The two floors of the human resources department and the sales department are not adjacent.",
+            "The finance department is on the next floor of the planning department.",
+            "The floor of the administrative department is above the planning department, but in the manpower Below the Resources Department.",
+            "The human resources department is not on the top floor."
+        ],
+        "answer": "d",
+        "id": 497,
+        "cot": "Let's analyze the given information. We know that the human resources department and the sales department are not adjacent, so they cannot be on the same floor. We also know that the finance department is on the floor above the planning department, and the administrative department is above the planning department but below the human resources department. This means that the planning department is on a floor that is below the administrative department and the human resources department. Since the human resources department is not on the top floor, the top floor must be occupied by either the research and development department or the sales department. We can eliminate option D because the sales department cannot be on the top floor. We can also eliminate option C because the research and development department cannot be on the floor below the human resources department. This leaves us with options A and B. We can eliminate option B because the research and development department cannot be on the floor below the administrative department. Therefore, the research and development department must be on either floor 3 or floor 4.",
+        "cot_parsing": [
+            {
+                "statement": "the human resources department and the sales department cannot be on the same floor",
+                "evidence": "The two floors of the human resources department and the sales department are not adjacent",
+                "Verification": "false"
+            },
+            {
+                "statement": "The planning department is on a floor that is below the administrative department and the human resources department.",
+                "evidence": "The finance department is on the floor above the planning department, and the administrative department is above the planning department but below the human resources department.",
+                "Verification": "true"
+            },
+            {
+                "statement": "The top floor must be occupied by either the research and development department or the sales department.",
+                "evidence": "The human resources department is not on the top floor",
+                "Verification": "true"
+            },
+            {
+                "statement": "We can eliminate option D",
+                "evidence": "The sales department cannot be on the top floor",
+                "Verification": "false"
+            },
+            {
+                "statement": "We can also eliminate option C",
+                "evidence": "The research and development department cannot be on the floor below the human resources department",
+                "Verification": "true"
+            },
+            {
+                "statement": "We can eliminate option B",
+                "evidence": "the research and development department cannot be on the floor below the administrative department",
+                "Verification": "true"
+            },
+            {
+                "statement": "the research and development department must be on either floor 3 or floor 4.",
+                "evidence": "This leaves us with options A and B. We can eliminate option B because the research and development department cannot be on the floor below the administrative department",
+                "Verification": "false"
+            }
+        ],
+        "sel_idx": 67
+    },
+    {
+        "question": "A street comprehensive governance committee has 6 members? F, G, H, I, M and P.Each of these members must be a member of at least one of the three sub-committees under the Comprehensive Governance Committee.Each sub-committee is composed of 3 different members.The known information is as follows? one of the six members serves as a member of three subcommittees.F is not a member of the same subcommittee as G.H is not a member of the same subcommittee as I.\nWhich of the following statements must be true?\nA.M and P are members of a subcommittee.\nB.F and H are members of a subcommittee.\nC.G and I are members of a subcommittee.\nD.1 member of any sub-committee.",
+        "question_parsing": [
+            "A street comprehensive governance committee has 6 members? F, G, H, I, M and P.",
+            "Each of these members must be a member of at least one of the three sub-committees under the Comprehensive Governance Committee.",
+            "Each sub-committee is composed of 3 different members.",
+            "One of the six members serves as a member of three subcommittees.",
+            "F is not a member of the same subcommittee as G.",
+            "H is not a member of the same subcommittee as I."
+        ],
+        "answer": "a",
+        "id": 338,
+        "cot": "Since each member must be a member of at least one sub-committee, and each sub-committee has 3 members, we can conclude that each member is a member of exactly one sub-committee. Since F is a member of three sub-committees, it must be the case that F is a member of two sub-committees that have only one member in common, and the third sub-committee has the remaining three members. Since H and I are not members of the same sub-committee, they must be in different sub-committees. Therefore, F cannot be in the same sub-committee as H and I. This means that F must be in a sub-committee with G and M, and the other two sub-committees must have H and I, and P respectively.",
+        "cot_parsing": [
+            {
+                "statement": "Each member is a member of exactly one sub-committee.",
+                "evidence": "Each member must be a member of at least one sub-committee, and each sub-committee has 3 members",
+                "Verification": "false"
+            },
+            {
+                "statement": "It must be the case that F is a member of two sub-committees that have only one member in common, and the third sub-committee has the remaining three members.",
+                "evidence": "F is a member of three sub-committees",
+                "Verification": "false"
+            },
+            {
+                "statement": "F cannot be in the same sub-committee as H and I.",
+                "evidence": "Since H and I are not members of the same sub-committee, they must be in different sub-committees",
+                "Verification": "true"
+            },
+            {
+                "statement": "F must be in a sub-committee with G and M, and the other two sub-committees must have H and I, and P respectively.",
+                "evidence": "F cannot be in the same sub-committee as H and I",
+                "Verification": "false"
+            }
+        ],
+        "sel_idx": 69
+    },
+    {
+        "question": "There are 6 rectangular vegetable ponds of the same size in a plastic shed, arranged in order from left to right? 1, 2, 3, 4, 5 and 6.And No.1 and No.6 are not adjacent.There are exactly 6 kinds of vegetables that need to be planted in the greenhouse? Q, L, H, x, S and Y.Each vegetable pond can only grow one of them.The planting arrangement must meet the following conditions? Q is planted in a vegetable pond on the left side of H.X species are in No.1 or No.6 vegetable ponds.No.3 vegetable pond is planted with Y or s.L is planted right next to S.\nIf the H species is in No.2 Caichizi, which of the following statements must be true?\nA.X species are in No.6 vegetable pond.\nB.Type L is in No.4 vegetable pond.\nC.L is planted in No.5 vegetable pond.\nD.Type Y is in No.3 vegetable pond.",
+        "question_parsing": [
+            "There are 6 rectangular vegetable ponds of the same size in a plastic shed, arranged in order from left to right? 1, 2, 3, 4, 5 and 6.",
+            "And No.1 and No.6 are not adjacent.",
+            "There are exactly 6 kinds of vegetables that need to be planted in the greenhouse? Q, L, H, x, S and Y.",
+            "Each vegetable pond can only grow one of them.",
+            "Q is planted in a vegetable pond on the left side of H.",
+            "X species are in No.1 or No.6 vegetable ponds.",
+            "No.3 vegetable pond is planted with Y or s.",
+            "L is planted right next to S.",
+            "the H species is in No.2 Caichizi"
+        ],
+        "answer": "a",
+        "id": 411,
+        "cot": "Since H is in the No.2 vegetable pond, and No.1 and No.6 are not adjacent, H cannot be in No.1 or No.6. This means that X must be in No.1 or No.3. Since No.3 is planted with Y or S, and L is planted right next to S, L cannot be in No.3. Therefore, L must be in No.4 or No.5. Since L is not in No.3, Y must be in No.3. This means that S must be in No.5.",
+        "cot_parsing": [
+            {
+                "statement": "X must be in No.1 or No.3.",
+                "evidence": "H is in the No.2 vegetable pond, and No.1 and No.6 are not adjacent, H cannot be in No.1 or No.6",
+                "Verification": "false"
+            },
+            {
+                "statement": "L cannot be in No.3.",
+                "evidence": "No.3 is planted with Y or S, and L is planted right next to S",
+                "Verification": "true"
+            },
+            {
+                "statement": "L must be in No.4 or No.5.",
+                "evidence": "No.3 is planted with Y or S, and L is planted right next to S, L cannot be in No.3",
+                "Verification": "true"
+            },
+            {
+                "statement": "Y must be in No.3.",
+                "evidence": "L is not in No.3",
+                "Verification": "false"
+            },
+            {
+                "statement": "S must be in No.5.",
+                "evidence": "Since L is not in No.3, Y must be in No.3",
+                "Verification": "false"
+            }
+        ],
+        "sel_idx": 74
+    },
+    {
+        "question": "A certain class intends to select two of three girls from Fang Rufen, Guo Yanran, He Zhilian, and three from five male students such as Peng Youwen, Qiu Zhijie, Ren Xiangyang, Song Wenkai, Tang Xiaohua to form a five-person support group for college students to volunteer teaching in the mountains.Requirements? (1) Guo Yanran and Tang Xiaohua are not selected at the same time; (2) Peng Youwen and Song Kaiwen are not selected at the same time; (3) Qiu Zhijie and Tang Xiaohua are not selected at the same time.\nWhich of the following must be selected?\nA.Fang Rufen\nB.Guo Yanran\nC.Song Kaiwen\nD.Ren Xiangyang",
+        "question_parsing": [
+            "A certain class intends to select two of three girls from Fang Rufen, Guo Yanran, He Zhilian, and three from five male students such as Peng Youwen, Qiu Zhijie, Ren Xiangyang, Song Wenkai, Tang Xiaohua to form a five-person support group for college students to volunteer teaching in the mountains.",
+            "Guo Yanran and Tang Xiaohua are not selected at the same time",
+            "Peng Youwen and Song Kaiwen are not selected at the same time",
+            "Qiu Zhijie and Tang Xiaohua are not selected at the same time"
+        ],
+        "answer": "d",
+        "id": 32,
+        "cot": "We need to find the must-selected students. Let's analyze the given conditions:\n\n1. Guo Yanran and Tang Xiaohua are not selected at the same time.\n2. Peng Youwen and Song Kaiwen are not selected at the same time.\n3. Qiu Zhijie and Tang Xiaohua are not selected at the same time.\n\nFrom condition 1, we know that either Guo Yanran or Tang Xiaohua must be selected. Let's assume Guo Yanran is selected. Then, Tang Xiaohua cannot be selected, and we have 2 girls and 4 boys left.\n\nFrom condition 2, we know that Peng Youwen and Song Kaiwen are not selected at the same time. This means that at least one of them must be selected.\n\nFrom condition 3, we know that Qiu Zhijie and Tang Xiaohua are not selected at the same time. Since Tang Xiaohua is not selected, Qiu Zhijie can be selected.",
+        "cot_parsing": [
+            {
+                "statement": "either Guo Yanran or Tang Xiaohua must be selected",
+                "evidence": "From Condition 1: Guo Yanran and Tang Xiaohua are not selected at the same time",
+                "Verification": "false"
+            },
+            {
+                "statement": "Assume Guo Yanran is selected. Then, Tang Xiaohua cannot be selected, and we have 2 girls and 4 boys left.",
+                "evidence": "From condition 1, we know that either Guo Yanran or Tang Xiaohua must be selected",
+                "Verification": "false"
+            },
+            {
+                "statement": "at least one of them must be selected",
+                "evidence": "From condition 2, we know that Peng Youwen and Song Kaiwen are not selected at the same time",
+                "Verification": "true"
+            },
+            {
+                "statement": "Qiu Zhijie can be selected.",
+                "evidence": "From condition 3, we know that Qiu Zhijie and Tang Xiaohua are not selected at the same time. Since Tang Xiaohua is not selected",
+                "Verification": "false"
+            }
+        ],
+        "sel_idx": 78
+    },
+    {
+        "question": "A street comprehensive governance committee has 6 members? F, G, H, I, M and P.Each of these members must be a member of at least one of the three sub-committees under the Comprehensive Governance Committee.Each sub-committee is composed of 3 different members.The known information is as follows? one of the six members serves as a member of three subcommittees.F is not a member of the same subcommittee as G.H is not a member of the same subcommittee as I.\nWhich of the following statements must be true?\nA.One of F or G is a member of three subcommittees.\nB.One of H or I is a member of three subcommittees.\nC.P or M only serve on one subcommittee.\nD.One member happens to be a member of the two subcommittees.",
+        "question_parsing": [
+            "A street comprehensive governance committee has 6 members, F, G, H, I, M and P",
+            "Each of these members must be a member of at least one of the three sub-committees under the Comprehensive Governance Committee.",
+            "Each sub-committee is composed of 3 different members.",
+            "One of the six members serves as a member of three subcommittees.",
+            "F is not a member of the same subcommittee as G.",
+            "H is not a member of the same subcommittee as I."
+        ],
+        "answer": "d",
+        "id": 493,
+        "cot": "Since one of the six members serves as a member of three subcommittees, and F is not a member of the same subcommittee as G, F must be this member. Since H is not a member of the same subcommittee as I, H and I cannot both be members of three subcommittees. Therefore, either H or I must be a member of one subcommittee, and the other must be a member of two subcommittees.",
+        "cot_parsing": [
+            {
+                "statement": "F must be this member",
+                "evidence": "one of the six members serves as a member of three subcommittees, and F is not a member of the same subcommittee as G",
+                "Verification": "false"
+            },
+            {
+                "statement": "H and I cannot both be members of three subcommittees",
+                "evidence": "H is not a member of the same subcommittee as I",
+                "Verification": "true"
+            },
+            {
+                "statement": "either H or I must be a member of one subcommittee, and the other must be a member of two subcommittees",
+                "evidence": "H and I cannot both be members of three subcommittees",
+                "Verification": "false"
+            }
+        ]
+    },
+    {
+        "question": "There are five teams participating in the game.The audience had the following comments on the results? (1) The champion is either the Shannan team or the Jiangbei team.(2) The champion is neither Shanbei nor Jiangnan.(3) The champion is Jiangnan Team.(4) The champion is not the Shannan team.\nThe result of the match showed that only one argument was correct, so who won the championship：\nA Shannan\nB Jiangnan\nC Shanbei\nD Jiangbei",
+        "question_parsing": [
+            "Only one argument as follows is correct.",
+            "The champion is either the Shannan team or the Jiangbei team.",
+            "The champion is neither Shanbei nor Jiangnan.",
+            "The champion is Jiangnan Team.",
+            "The champion is not the Shannan team."
+        ],
+        "answer": "C",
+        "id": 441,
+        "cot": "Let's analyze the given statements:\n(1) The champion is either the Shannan team or the Jiangbei team.\n(2) The champion is neither Shanbei nor Jiangnan.\n(3) The champion is Jiangnan Team.\n(4) The champion is not the Shannan team.\nFrom statement (1), we know the champion is either Shannan or Jiangbei.\n\nFrom statement (2), we know the champion is not Shanbei or Jiangnan.\nFrom statement (3), we know the champion is Jiangnan.\nFrom statement (4), we know the champion is not Shannan.\nCombining these statements, we can conclude that the champion is Jiangnan, as it is the only team that satisfies all the conditions.",
+        "cot_parsing": [
+            {
+                "statement":"The champion is Jiangnan.", 
+                "evidence":"The champion is either the Shannan team or the Jiangbei team. The champion is neither Shanbei nor Jiangnan. The champion is Jiangnan Team. The champion is not the Shannan team.", 
+                "Verification":"False"
+            }
+        ]
+    },
+    {
+        "question": "There are six statements A.B, C, D, E, and F in a database, but this database is currently uncoordinated, and certain statements must be deleted to restore the coordination of the database.Known? (1) If statement A is retained, then statement B and statement C must be retained.(2) If statement E is retained, statement D and statement C must be deleted at the same time.(3) Statement F can only be retained if statement E is retained.(4) Statement A is important information and cannot be deleted.\nIf the above items are true, which of the following must be true?\nA.Keep statement E and delete statement C.\nB.At the same time retain the statement C and statement D.\nC.Keep statement E and delete statement D.\nD.Delete statement E and statement F at the same time.",
+        "question_parsing": [
+            "There are six statements A.B, C, D, E, and F in a database, but this database is currently uncoordinated, and certain statements must be deleted to restore the coordination of the database.",
+            "If statement A is retained, then statement B and statement C must be retained.",
+            "If statement E is retained, statement D and statement C must be deleted at the same time.",
+            "Statement F can only be retained if statement E is retained.",
+            "Statement A is important information and cannot be deleted."
+        ],
+        "answer": "D",
+        "id": 217,
+        "cot": "We need to analyze the given conditions to determine which statements must be true. From condition (1), we know that if statement A is retained, then statements B and C must be retained. From condition (2), we know that if statement E is retained, then statements D and C must be deleted at the same time. From condition (3), we know that statement F can only be retained if statement E is retained. From condition (4), we know that statement A is important information and cannot be deleted. Since we have analyzed the conditions, we can now make some conclusions. We know that statement A is important and cannot be deleted (condition 4). We also know that if statement A is retained, then statements B and C must be retained (condition 1). This means that statements B and C must be retained. \nNow, let's consider the relationship between statements E, D, and C. From condition (2), we know that if statement E is retained, then statements D and C must be deleted at the same time. This means that if statement E is retained, statement C must be deleted. \nFrom condition (3), we know that statement F can only be retained if statement E is retained. This means that if statement F is retained, statement E must also be retained. \nNow, we can conclude that if statement E is retained, then statement C must be deleted, and if statement F is retained, then statement E must be retained. This means that statement E and statement F are related, and we cannot retain one without the other. \n\nBased on this analysis, we can conclude that if statement E is retained, then statement C must be deleted, and if statement F is retained, then statement E must be retained.",
+        "cot_parsing": [
+            {
+                "statement":"B and C must be retained.", 
+                "evidence":"We know that statement A is important and cannot be deleted. We also know that if statement A is retained, then statements B and C must be retained.", 
+                "Verification":"True"
+            },
+            {
+                "statement":"If statement E is retained, statement C must be deleted.", 
+                "evidence":"If statement E is retained, then statements D and C must be deleted at the same time.", 
+                "Verification":"True"
+            },
+            {
+                "statement":"If statement F is retained, statement E must also be retained.", 
+                "evidence":"Statement F can only be retained if statement E is retained.", 
+                "Verification":"True"
+            },
+            {
+                "statement":"Statement E and statement F are related, and we cannot retain one without the other.", 
+                "evidence":"If statement E is retained, then statement C must be deleted, and if statement F is retained, then statement E must be retained.", 
+                "Verification":"False"
+            },
+            {
+                "statement":"If statement E is retained, then statement C must be deleted, and if statement F is retained, then statement E must be retained.", 
+                "evidence":"B and C must be retained. If statement E is retained, statement C must be deleted. If statement F is retained, statement E must also be retained. Statement E and statement F are related, and we cannot retain one without the other.", 
+                "Verification":"False"
+            }
+        ]
+    },
+    {
+        "question": "The members of the printing group and the binding group are mainly from the following seven employees-F, G, H, J, K, L and M.The members of each group must meet the following conditions? (1) Each group has at least 3 employees .(2) F and K cannot be in the same group.(3) If K is in a certain group, J must also be in this group.(4) M is at least one of the members of these two groups.(5) At least one of the same employees in both groups.\nIf the members of the printing group are composed of F, H, L, and M, and the members of the binding group are composed of G, H, and J, then K can replace which member of the two groups without violating any of the given conditions：\nA.F\nB.G\nC.H\nD.L",
+        "question_parsing": [
+            "The members of the printing group are composed of F, H, L, and M, and the members of the binding group are composed of G, H, and J.",
+            "Each group has at least 3 employees.",
+            "F and K cannot be in the same group.",
+            "If K is in a certain group, J must also be in this group.",
+            "M is at least one of the members of these two groups.",
+            "At least one of the same employees in both groups."
+        ],
+        "answer": "B",
+        "id": 11,
+        "cot": "We are given the composition of the printing group and the binding group, and we need to find out which member of the two groups K can replace without violating any of the given conditions. We can analyze the conditions and the composition of the groups to find the answer. \nSince we are given the composition of the printing group and the binding group, we can analyze the conditions and the composition of the groups to find the answer. We can start by identifying the members of each group and the conditions that apply to each group. The members of the printing group are F, H, L, and M, and the members of the binding group are G, H, and J.",
+        "cot_parsing": [
+            {
+                "statement":"The members of the printing group are F, H, L, and M, and the members of the binding group are G, H, and J.", 
+                "evidence":"Identifying the members of each group and the conditions that apply to each group.", 
+                "Verification":"False"
+            }
+        ]
+    },
+    {
+        "question": "A unit arranges for 6 people on duty on the first day, second day, third day of the new year.They are G., H, K, L, P, and S.Two people are required per day.The personnel arrangement must meet the following conditions? (1) L and P must be on duty on the same day.(2) G and H cannot be on duty on the same day.(3) If K is on the first day of duty, then G is on the second day of duty.(4 ) If S is on the third day of duty, then H is on the second day of duty.\nWhich of the following can be a complete and accurate arrangement of the duty dates of these people：\nA.Junior One? L and P? Junior Two? G and K? Junior Three H and S\nB.First day? L and P? second day? H and K? third day G and S\nC.Junior One? G and K? Junior Two? L and P? Junior Three H and S\nD.Junior One? K and S? Junior Two? G and H? Junior Three L and P",
+        "question_parsing": [
+            "A unit arranges for 6 people on duty on the first day, second day, third day of the new year.They are G., H, K, L, P, and S.",
+            "Two people are required per day.",
+            "L and P must be on duty on the same day.",
+            "G and H cannot be on duty on the same day.",
+            "If K is on the first day of duty, then G is on the second day of duty.",
+            "If S is on the third day of duty, then H is on the second day of duty."
+        ],
+        "answer": "B",
+        "id": 57,
+        "cot": "We need to find a personnel arrangement that meets the given conditions. Condition (1) states that L and P must be on duty on the same day. Condition (2) states that G and H cannot be on duty on the same day. Condition (3) states that if K is on the first day of duty, then G is on the second day of duty. Condition (4) states that if S is on the third day of duty, then H is on the second day of duty. We can start by analyzing the conditions and trying to find a possible arrangement. Try to find a possible arrangement that meets the conditions. Since L and P must be on duty on the same day (Condition 1), we can start by placing them together on one of the three days. Let's try placing them on the first day. This leaves two people, G, H, K, and S, to be assigned to the second and third days.",
+        "cot_parsing": [
+            {
+                "statement":"Place L and P on the first day. G, H, K, and S, to be assigned to the second and third days.", 
+                "evidence":" Since L and P must be on duty on the same day (Condition 1), we can start by placing them together on one of the three days.", 
+                "Verification":"False"
+            }
+        ]
+    },
+    {
+        "question": "There are 7 heart disease patients E, F, G, H, I, J, K to be assigned to 4 doctors for treatment, they are Dr.Zhang, Dr.Li, Dr.Wang and Dr.Liu.Only one doctor is responsible for each patient, and each doctor is responsible for the treatment of up to two patients.Among the patients, J and K are children, and the remaining 5 are adults; E, F, and J are males, and the remaining 4 are females.The following conditions must be met? (1) Dr.Zhang is only responsible for treating male patients.(2) Dr.Li can only be responsible for the treatment of 1 patient.(3) If a doctor is responsible for treating a child patient, then he must be responsible for the treatment of an adult patient of the same sex as the child.\nBased on the above conditions, which of the following must be true：\nA.Doctor F is responsible for treatment.\nC.J is treated by Dr.Zhang.\nB.C is treated by Dr.Liu.\nD.H is treated by Dr.Wang.",
+        "question_parsing": [
+            "There are 7 heart disease patients E, F, G, H, I, J, K to be assigned to 4 doctors for treatment, they are Dr.Zhang, Dr.Li, Dr.Wang and Dr.Liu.",
+            "Only one doctor is responsible for each patient, and each doctor is responsible for the treatment of up to two patients.",
+            "Among the patients, J and K are children, and the remaining 5 are adults.",
+            "E, F, and J are males, and the remaining 4 are females.",
+            "Dr.Zhang is only responsible for treating male patients.",
+            "Dr.Li can only be responsible for the treatment of 1 patient.",
+            "If a doctor is responsible for treating a child patient, then he must be responsible for the treatment of an adult patient of the same sex as the child."
+        ],
+        "answer": "C",
+        "id": 464,
+        "cot": "Let's analyze the conditions and the given information. Dr. Zhang is only responsible for treating male patients. Since E, F, and J are males, Dr. Zhang must be responsible for at least one of them. Condition (3) states that if a doctor is responsible for treating a child patient, then he must be responsible for the treatment of an adult patient of the same sex as the child. Since J and K are children, and E, F, and J are males, Dr. Zhang must be responsible for treating J. Since J is a male, Dr. Zhang must also be responsible for treating an adult male patient. This means Dr. Zhang is responsible for treating either E or F. Among the patients, J and K are children, and the remaining 5 are adults",
+        "cot_parsing": [
+            {
+                "statement":"Dr. Zhang must be responsible for at least one of E, F and J.", 
+                "evidence":"Since E, F, and J are males, Dr. Zhang must be responsible for at least one of them.", 
+                "Verification":"True"
+            }, 
+            {
+                "statement":"Dr. Zhang must be responsible for treating J.", 
+                "evidence":" Since J and K are children, and E, F, and J are males, Dr. Zhang must be responsible for treating J. ", 
+                "Verification":"False"
+            }, 
+            {
+                "statement":"Dr. Zhang must also be responsible for treating an adult male patient.", 
+                "evidence":"Since J is a male, Dr. Zhang must also be responsible for treating an adult male patient.", 
+                "Verification":"True"
+            },
+            {
+                "statement":"This means Dr. Zhang is responsible for treating either E or F.", 
+                "evidence":"Dr. Zhang must be responsible for treating J. Dr. Zhang must also be responsible for treating an adult male patient. Dr. Zhang must be responsible for at least one of E, F and J.", 
+                "Verification":"True"
+            }
+        ]
+    }, 
+    {
+        "question": "The late famous logician Jin Yuelin of China heard the words \"Money is like dung\" and \"Friends are worth a thousand dollars\" when he was a child, and found that there are logical problems because they can lead to the absurd conclusion of \"friends are like dung\".\nSince the conclusion of \"friends like dung\" is not true, it can be logically derived：\nA.The expression \"money is like dung\" is false.\nB.If a friend is indeed worth a lot of money, then money is not like dung.\nC.The statement that \"friends are valuable\" is true.\nD.The words \"Money is like dung\" and \"Friends are worth a thousand dollars\" are either true or false.",
+        "question_parsing": [
+            "Money is like dung.",
+            "Friends are worth a thousand dollars.",
+            "There are logical problems because they can lead to the absurd conclusion of \"friends are like dung.",
+            "The conclusion of \"friends like dung\" is not true."
+        ],
+        "answer": "B",
+        "id": 375,
+        "cot": "The conclusion \"friends are like dung\" is absurd, so we need to find the logical flaw in the argument. The argument seems to be using a form of analogy, comparing \"money is like dung\" to \"friends are worth a thousand dollars\". The problem is that the analogy is not consistent, as \"money is like dung\" implies that money is worthless, while \"friends are worth a thousand dollars\" implies that friends are valuable. This inconsistency leads to the absurd conclusion \"friends are like dung\".",
+        "cot_parsing": [
+            {
+                "statement": "The problem is that the analogy is not consistent",
+                "evidence": "The problem is that the analogy is not consistent, as \"money is like dung\" implies that money is worthless, while \"friends are worth a thousand dollars\" implies that friends are valuable.",
+                "Verification": "True"
+            }
+        ]
+    },
+    {
+        "question": "There are 7 candidates hired by Haier: F, G, H, I, W, X and Y.One of them needs to be assigned to the public relations department, three to the production department, and three to the sales department.The personnel allocation of these 7 employees must meet the following conditions: (1) H and Y must be allocated in the same department.(2) F and G cannot be allocated in the same department (3) If X is allocated in the sales department, W is allocated in the production department.(4) F must be allocated in the production department.\nWhich of the following pairs of employees is unlikely to be assigned to the sales department?\nA.G and I\nB.G and X\nC.G and Y\nD.H and W",
+        "question_parsing": [
+            "One of them needs to be assigned to the public relations department, three to the production department, and three to the sales department",
+            "H and Y must be allocated in the same department",
+            "F and G cannot be allocated in the same department",
+            "If X is allocated in the sales department, W is allocated in the production department",
+            "F must be allocated in the production department"
+        ],
+        "answer": "b",
+        "id": 188,
+        "cot": "Let's analyze the conditions given:\n\n1. H and Y must be allocated in the same department.\n2. F and G cannot be allocated in the same department.\n3. If X is allocated in the sales department, W is allocated in the production department.\n4. F must be allocated in the production department.\n\nFrom condition 4, we know F must be in the production department. From condition 2, G cannot be in the same department as F, so G must be in either the public relations or sales department. From condition 3, if X is in the sales department, W must be in the production department. Since F is already in the production department, W cannot be in the production department, so X must be in the sales department. This means W is in the production department.\n\nNow, let's consider the remaining employees: H, I, and Y. From condition 1, H and Y must be in the same department. Since F is in the production department, H and Y cannot be in the production department. Therefore, they must be in either the public relations or sales department. Since X is already in the sales department, H and Y must be in the public relations department",
+        "cot_parsing": [
+            {
+                "statement": "G must be in either the public relations or sales department",
+                "evidence": "From condition 4, we know F must be in the production department. From condition 2, G cannot be in the same department as F",
+                "Verification": "True"
+            },
+            {
+                "statement": "W cannot be in the production department",
+                "evidence": "From condition 3, if X is in the sales department, W must be in the production department. Since F is already in the production department",
+                "Verification": "False"
+            },
+            {
+                "statement": "X must be in the sales department",
+                "evidence": "From condition 3, if X is in the sales department, W must be in the production department. Since F is already in the production department, W cannot be in the production department",
+                "Verification": "False"
+            },
+            {
+                "statement": "W is in the production department",
+                "evidence": "Since F is already in the production department, W cannot be in the production department, so X must be in the sales department",
+                "Verification": "False"
+            },
+            {
+                "statement": "H and Y must be in the public relations department",
+                "evidence": "From condition 1, H and Y must be in the same department. Since F is in the production department",
+                "Verification": "False"
+            },
+            {
+                "statement": "H and Y must be in either the public relations or sales department",
+                "evidence": "From condition 1, H and Y must be in the same department. Since F is in the production department, H and Y cannot be in the production department",
+                "Verification": "False"
+            },
+            {
+                "statement": "H and Y must be in the public relations department",
+                "evidence": "Since X is already in the sales department",
+                "Verification": "False"
+            }
+        ]
+    },
+    {
+        "question": "There are 6 singers: F, G, L, K, H, M.3 piano accompaniment: X, Y, W.Each piano accompanimentist happened to accompany two of the singers.   Known condition information is as follows: (1) If X is F accompaniment, then W is L accompaniment.(2) If X is not a G accompaniment, then Y is an M accompaniment.(3) X or Y is H accompaniment.(4) F and G do not share accompaniment; L and K do not share accompaniment; H and M do not share accompaniment.\nIf X is an accompaniment to L and H, which of the following statements must be true?\nA.W is K accompaniment.\nB.Y is F accompaniment.\nC.G and K are accompanied by the same accompaniment.\nD.F and M are accompanied by the same accompaniment.",
+        "question_parsing": [
+            "Each piano accompanimentist happened to accompany two of the singers",
+            "If X is F accompaniment, then W is L accompaniment",
+            "If X is not a G accompaniment, then Y is an M accompaniment",
+            "X or Y is H accompaniment",
+            "F and G do not share accompaniment; L and K do not share accompaniment; H and M do not share accompaniment",
+            "X is an accompaniment to L and H"
+        ],
+        "answer": "a",
+        "id": 295,
+        "cot": "Thought:  Since X is an accompaniment to L and H, we know that X is not G accompaniment (form X is an accompaniment to L and H, and each piano accompanimentist happened to accompany two of the singers.) and X is not F accompaniment (from X is an accompaniment to L and H, and each piano accompanimentist happened to accompany two of the singers.). From condition 2, we know that Y is an M accompaniment. We also know that X or Y is H accompaniment (from X or Y is H accompaniment), so X is H accompaniment. Now, we can deduce that W is L accompaniment (from If X is F accompaniment, then W is L accompaniment.).",
+        "cot_parsing": [
+            {
+                "statement": "X is not G accompaniment",
+                "evidence": "X is an accompaniment to L and H, and each piano accompanimentist happened to accompany two of the singers",
+                "Verification": "True"
+            },
+            {
+                "statement": "X is not F accompaniment",
+                "evidence": "X is an accompaniment to L and H, and each piano accompanimentist happened to accompany two of the singers",
+                "Verification": "True"
+            },
+            {
+                "statement": "Y is an M accompaniment",
+                "evidence": "From condition 2",
+                "Verification": "True"
+            },
+            {
+                "statement": "X is H accompaniment",
+                "evidence": "we know that Y is an M accompaniment. We also know that X or Y is H accompaniment",
+                "Verification": "True"
+            },
+            {
+                "statement": "W is L accompaniment",
+                "evidence": "If X is F accompaniment, then W is L accompaniment",
+                "Verification": "False"
+            }
+        ]
+    },
+    {
+        "question": "There are 6 singers: F, G, L, K, H, M.3 piano accompaniment: X, Y, W.Each piano accompanimentist happened to accompany two of the singers. Known condition information is as follows: (1) If X is F accompaniment, then W is L accompaniment.(2) If X is not a G accompaniment, then Y is an M accompaniment.(3) X or Y is H accompaniment.(4) F and G do not share accompaniment; L and K do not share accompaniment; H and M do not share accompaniment.\nIf W is the accompaniment of F and M, which pair of singers can X accompany?\nA.G and H\nB.G and K\nC.L and H\nD.L and K",
+        "question_parsing": [
+            "Each piano accompanimentist happened to accompany two of the singers",
+            "If X is F accompaniment, then W is L accompaniment",
+            "If X is not a G accompaniment, then Y is an M accompaniment",
+            "X or Y is H accompaniment",
+            "F and G do not share accompaniment; L and K do not share accompaniment; H and M do not share accompaniment",
+            "W is the accompaniment of F and M"
+        ],
+        "answer": "b",
+        "id": 396,
+        "cot": "Thought: We are trying to find out which pair of singers X can accompany. We know that W is the accompaniment of F and M. We also know that X or Y is H accompaniment. Since W is not H accompaniment (because W is the accompaniment of F and M, and H and M do not share accompaniment), X must be H accompaniment. Now, we need to find out which singer G accompanies. We know that X is not G accompaniment (because X is H accompaniment, and X or Y is H accompaniment). We also know that F and G do not share accompaniment. Therefore, G must accompany K. Now, we can conclude that X accompanies H, and G accompanies.",
+        "cot_parsing": [
+            {
+                "statement": "W is not H accompaniment",
+                "evidence": "W is the accompaniment of F and M, and H and M do not share accompaniment",
+                "Verification": "True"
+            },
+            {
+                "statement": "X must be H accompaniment",
+                "evidence": "W is not H accompaniment",
+                "Verification": "False"
+            },
+            {
+                "statement": "X is not G accompaniment",
+                "evidence": "X is H accompaniment, and X or Y is H accompaniment",
+                "Verification": "False"
+            },
+            {
+                "statement": "G must accompany K.",
+                "evidence": "We know that X is not G accompaniment (because X is H accompaniment, and X or Y is H accompaniment). We also know that F and G do not share accompaniment",
+                "Verification": "False"
+            }
+        ]
+    },
+    {
+        "question": "There are 7 athletes participating in the men's 5km finals: S, T, U, W, X, Y and Z.The costumes worn by athletes are either red or green.No athletes reach the finish line at the same time.The known information is as follows: Athletes who reach the finish line in succession are not all red.Y reached the end point at a time before T and W.Two athletes who reached the finish line before Y happened to be wearing red costumes.S is the sixth athlete to reach the finish line.Z reached the end at a certain moment before U.\nIf the clothing of three athletes happens to be green, which of the following athletes must be green?\nA.S\nB.T\nC.W\nD.Z",
+        "question_parsing": [
+            "The costumes worn by athletes are either red or green",
+            "No athletes reach the finish line at the same time",
+            "Athletes who reach the finish line in succession are not all red",
+            "Y reached the end point at a time before T and W",
+            "Two athletes who reached the finish line before Y happened to be wearing red costumes",
+            "S is the sixth athlete to reach the finish line",
+            "Z reached the end at a certain moment before U",
+            "the clothing of three athletes happens to be green"
+        ],
+        "answer": "a",
+        "id": 379,
+        "cot": "Thought: Let's analyze the given information. We know that Y reached the finish line before T and W, and two athletes who reached the finish line before Y were wearing red costumes. This means that Y is not wearing a red costume. Since S is the sixth athlete to reach the finish line, and Y reached the finish line before S, S must be wearing a green costume. We also know that Z reached the finish line before U, and two athletes who reached the finish line before Y were wearing red costumes. This means that Z is not wearing a red costume, so Z must be wearing a green costume. We have now accounted for three athletes who are wearing green costumes: S, Y, and Z.",
+        "cot_parsing": [
+            {
+                "statement": "Y is not wearing a red costume",
+                "evidence": "We know that Y reached the finish line before T and W, and two athletes who reached the finish line before Y were wearing red costumes",
+                "Verification": "False"
+            },
+            {
+                "statement": "S must be wearing a green costume",
+                "evidence": "S is the sixth athlete to reach the finish line, and Y reached the finish line before S",
+                "Verification": "False"
+            },
+            {
+                "statement": "Z is not wearing a red costume, so Z must be wearing a green costume",
+                "evidence": "We also know that Z reached the finish line before U, and two athletes who reached the finish line before Y were wearing red costumes",
+                "Verification": "False"
+            }
+        ]
+    },
+    {
+        "question": "The members of the printing group and the binding group are mainly from the following seven employees-F, G, H, J, K, L and M. The members of each group must meet the following conditions: (1) Each group has at least 3 employees .(2) F and K cannot be in the same group.(3) If K is in a certain group, J must also be in this group.(4) M is at least one of the members of these two groups.(5) At least one of the same employees in both groups.\nIf both K and L are members of both groups, and the printing group has exactly three members, which of the following statements must be true?\nA.F in printing group\nB.F in the binding group\nC.G in the printing group\nD.M in the bookbinding group",
+        "question_parsing": [
+            "Each group has at least 3 employees",
+            "F and K cannot be in the same group",
+            "If K is in a certain group, J must also be in this group",
+            "M is at least one of the members of these two groups",
+            "At least one of the same employees in both groups",
+            "both K and L are members of both groups, and the printing group has exactly three members"
+        ],
+        "answer": "d",
+        "id": 412,
+        "cot": "Since K and L are members of both groups, and the printing group has exactly three members, we can deduce that K, L, and one other member must be in the printing group. From condition (3), if K is in a group, J must also be in that group. Since K is in both groups, J must also be in both groups. From condition (4), M is at least one of the members of these two groups, so M must be in either the printing group or the binding group. Since the printing group has exactly three members, M cannot be in the printing group. Therefore, M must be in the binding group.",
+        "cot_parsing": [
+            {
+                "statement": "K, L, and one other member must be in the printing group",
+                "evidence": "K and L are members of both groups, and the printing group has exactly three members",
+                "Verification": "True"
+            },
+            {
+                "statement": "J must also be in both groups",
+                "evidence": "From condition (3), if K is in a group, J must also be in that group. Since K is in both groups",
+                "Verification": "True"
+            },
+            {
+                "statement": "M must be in the binding group.",
+                "evidence": "the printing group has exactly three members, M cannot be in the printing group.",
+                "Verification": "True"
+            }
+        ]
+    },
+    {
+        "question": "Philosopher: \"I think, so I exist. If I don't exist, then I don't think. If I think, then life means nothing.\n If we add\" life does not mean emptiness \"to the above argument, what other conclusion can this philosopher draw?\n A.I exist\n B.I don't exist\n C.I think\n D.I don't think",
+        "question_parsing": [
+            "I think, so I exist",
+            "If I don't exist, then I don't think",
+            "If I think, then life means nothing",
+            "we add\" life does not mean emptiness \""
+        ],
+        "answer": "d",
+        "id": 107,
+        "cot": "Thought: The philosopher's argument is based on the idea that \"I think, so I exist\" and \"If I don't exist, then I don't think\". This suggests that the philosopher is trying to establish the existence of themselves through their own thought. The addition of \"life does not mean emptiness\" implies that the philosopher is trying to connect their existence to the meaning of life. The philosopher is likely trying to conclude that their existence is meaningful because they think.",
+        "cot_parsing": [
+            {
+                "statement": "The philosopher is trying to establish the existence of themselves through their own thought",
+                "evidence": "The philosopher's argument is based on the idea that \"I think, so I exist\" and \"If I don't exist, then I don't think\"",
+                "Verification": "True"
+            },
+            {
+                "statement": "The philosopher is trying to connect their existence to the meaning of life",
+                "evidence": "The addition of 'life does not mean emptiness'",
+                "Verification": "True"
+            },
+            {
+                "statement": "The philosopher is likely trying to conclude that their existence is meaningful",
+                "evidence": "they think",
+                "Verification": "True"
+            }
+        ]
+    }
+]
