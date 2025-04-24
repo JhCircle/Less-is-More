@@ -1,5 +1,9 @@
 <h1 align="center">🧠 Less is More: Enhancing Structured Multi-Agent Reasoning via Quality-Guided Distillation</h1>
 <p align="center"> 🎉 Third-place solution to the <strong>XLLM@ACL2025 Shared Task-III</strong>: <em>LLM for Structural Reasoning</em> 🏆 </p>
+<p align="center"> <strong>💌 Contact us:</strong> <a href="mailto:jhyuan.cs@gmail.com">jhyuan.cs@gmail.com</a> </p>
+<p align='center'>
+<a href="https://arxiv.org/abs/2504.16408"><img src="https://img.shields.io/badge/arXiv-2404.16408-b31b1b.svg" alt="ArXiv"></a>
+</p>
 <p align="center">
   <img src="./asset/less_is_more.png" width="30%" alt="Less is More: Structured Reasoning Framework"/>
 </p>
@@ -12,8 +16,12 @@
 </p>
 
 ---
+## News
+- `2025.04.23` 🎉🎉🎉 Released **all source code** to the public.
+- `2025.04.23` 🎉🎉🎉 Published our short paper [_Less is More_](https://arxiv.org/abs/2504.16408).
+---
 ## 🔍 Overview
-This repository provides the full implementation of our Less is More framework, which distills high-quality structured reasoning data into multi-agent LLaMA-3 modules. It addresses low-resource structured reasoning by combining:
+This repository provides the official full implementation of our ["Less is More: Enhancing Structured Multi-Agent Reasoning via Quality-Guided Distillation"](https://arxiv.org/abs/2504.16408) framework, which distills high-quality structured reasoning data into multi-agent LLaMA-3 modules. It addresses low-resource structured reasoning by combining:
 
 - 🧠 [Reverse-prompted](https://arxiv.org/pdf/2410.12323) task induction
 
@@ -28,7 +36,7 @@ This repository provides the full implementation of our Less is More framework, 
 
 - 🔍 **Semantic ICL Retrieval**: Top-k demos fetched via [BGE-M3](https://huggingface.co/BAAI/bge-m3) embeddings
 
-- 🎯 **Reward Filtering**: [LLaMA3 reward](https://huggingface.co/Ray2333/GRM-Llama3.2-3B-rewardmodel-ft) model filters reasoning quality
+- 🎯 **Reward Filtering**: [LLaMA3.2 Reward](https://huggingface.co/Ray2333/GRM-Llama3.2-3B-rewardmodel-ft) model filters reasoning quality
 
 - ⚡ **LoRA+ Fine-tuning**: Efficient SFT on each role using [ms-swift](https://github.com/modelscope/ms-swift)
 
@@ -38,6 +46,7 @@ This repository provides the full implementation of our Less is More framework, 
 ## 📦 Installation
 
 ```bash
+git clone https://github.com/Jiahao-Yuan/Less-is-More.git
 cd Less-is-More
 pip install -r requirements.txt
 ```
@@ -230,6 +239,37 @@ Produces `results.json` in the following structure:
 
 ## 📬 Contact
 
-For any questions, suggestions, or collaborations, feel free to open an issue or start a discussion in the community. We'd 💖 to hear from you and are always open to feedback or collaboration ideas!
+For any questions, suggestions, or collaborations, feel free to open an issue or start a discussion in the community.
+\
+We'd 💖 to hear from you and are always open to feedback or collaboration ideas!
+
+📬 Contact: <a href="mailto:jhyuan.cs@gmail.com">_jhyuan.cs@gmail.com_</a>
 
 ---
+
+## 📖 Citation
+If you find our work useful for your research, please kindly cite our paper as follows:
+```bibtex
+@misc{yuan2025moreenhancingstructuredmultiagent,
+      title={Less is More: Enhancing Structured Multi-Agent Reasoning via Quality-Guided Distillation}, 
+      author={Jiahao Yuan and Xingzhe Sun and Xing Yu and Jingwen Wang and Dehui Du and Zhiqing Cui and Zixiang Di},
+      year={2025},
+      eprint={2504.16408},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2504.16408}, 
+}
+```
+
+---
+## 🙏 Acknowledgement
+We sincerely thank the organizers of the XLLM@ACL2025 Shared Task for providing an open and challenging platform on [LLM for Structural Reasoning](https://github.com/xllms/LLMSR). 
+\
+This work has greatly benefited from the generous contributions of the open-source community. In particular, we acknowledge the following resources:
+> 📘 [**LogiQA**](https://github.com/lgw863/LogiQA-dataset) – A dataset for evaluating logical reasoning in QA tasks  
+> 🧠 [**BAAI/bge-m3**](https://huggingface.co/BAAI/bge-m3) – A powerful multilingual embedding model  
+> 🏆 [**Ray2333/GRM-Llama3.2-3B-rewardmodel-ft**](https://huggingface.co/Ray2333/GRM-Llama3.2-3B-rewardmodel-ft) – A high-performing LLaMA3-based reward model  
+> 🧰 [**microsoft/MS-Swift**](https://github.com/modelscope/ms-swift) – A Scalable lightWeight Infrastructure for Fine-Tuning
+
+
+We are truly grateful to the community for making such impactful resources openly available.
