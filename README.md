@@ -1,6 +1,6 @@
 <h1 align="center">🧠 Less is More: Enhancing Structured Multi-Agent Reasoning via Quality-Guided Distillation</h1>
 <p align="center"> 🎉 Third-place solution to the <strong>XLLM@ACL2025 Shared Task-III</strong>: <em>LLM for Structural Reasoning</em> 🏆 </p>
-<p align="center"> <strong>💌 Contact us:</strong> <a href="mailto:jhyuan.cs@gmail.com">jhyuan.cs@gmail.com</a> </p>
+<p align="center"> <strong>💌 Contact:</strong> <a href="mailto:jamse_yuan@163.com">jamse_yuan@163.com</a> </p>
 <p align='center'>
 <a href="https://arxiv.org/abs/2504.16408"><img src="https://img.shields.io/badge/arXiv-2404.16408-b31b1b.svg" alt="ArXiv"></a>
 </p>
@@ -58,7 +58,7 @@ pip install -r requirements.txt
 ```bash
 .
 ├── data/                               # Raw and processed data
-│   ├── train.txt                       # Raw LogicQA-style questions
+│   ├── train.txt                       # Raw LogiQA-style questions
 │   ├── All_Train_With_Scores.jsonl     # CoT scoring results
 │   ├── train/{strategy}_filtered.jsonl # Filtered by reward
 │   ├── test/test_question_parsing_role.jsonl
@@ -86,7 +86,7 @@ pip install -r requirements.txt
 ## 🛠️ How to Run
 
 ### 1️⃣ Step 1: 🧠 Data Synthesis
-Generate high-quality Question Parsing (QP), Chain-of-Thought Parsing (CP), and CoT Verification (CV: including both statement extraction and logical validation) from raw [LogicQA](https://github.com/lgw863/LogiQA-dataset) questions using GPT-4o via Retrieval-Augmented In-Context Learninig.
+Generate high-quality Question Parsing (QP), Chain-of-Thought Parsing (CP), and CoT Verification (CV: including both statement extraction and logical validation) from raw [LogiQA](https://github.com/lgw863/LogiQA-dataset) questions using GPT-4o via Retrieval-Augmented In-Context Learninig.
 ```bash
 python data_synthesize.py \
   --demo_pool demo_pool.json \
@@ -243,7 +243,7 @@ For any questions, suggestions, or collaborations, feel free to open an issue or
 \
 We'd 💖 to hear from you and are always open to feedback or collaboration ideas!
 
-📬 Contact: <a href="mailto:jhyuan.cs@gmail.com">_jhyuan.cs@gmail.com_</a>
+📬 Contact: <a href="mailto:jamse_yuan@163.com">_Jiahao Yuan_</a>
 
 ---
 
