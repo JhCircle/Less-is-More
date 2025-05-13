@@ -1,9 +1,13 @@
-<h1 align="center">🧠 Less is More: Enhancing Structured Multi-Agent Reasoning via Quality-Guided Distillation</h1>
+<h1 align="center">LLMSR@XLLM25:🧠 Less is More: Enhancing Structured Multi-Agent Reasoning via Quality-Guided Distillation</h1>
 <p align="center"> 🎉 Third-place solution to the <strong>XLLM@ACL2025 Shared Task-III</strong>: <em>LLM for Structural Reasoning</em> 🏆 </p>
 <p align="center"> <strong>💌 Contact:</strong> <a href="mailto:jamse_yuan@163.com">jamse_yuan@163.com</a> </p>
-<p align='center'>
-<a href="https://arxiv.org/abs/2504.16408"><img src="https://img.shields.io/badge/arXiv-2404.16408-b31b1b.svg" alt="ArXiv"></a>
-</p>
+<div align="center">
+
+[![Paper](https://img.shields.io/badge/arXiv-2404.18400-b31b1b.svg)](https://arxiv.org/abs/2404.18400)
+![GitHub Repo stars](https://img.shields.io/github/stars/JhCircle/Less-is-More?style=social)
+
+</div>
+
 <p align="center">
   <img src="./asset/less_is_more.png" width="30%" alt="Less is More: Structured Reasoning Framework"/>
 </p>
@@ -241,23 +245,27 @@ Produces `results.json` in the following structure:
 
 For any questions, suggestions, or collaborations, feel free to open an issue or start a discussion in the community.
 \
-We'd 💖 to hear from you and are always open to feedback or collaboration ideas!
+I'd 💖 to hear from you and are always open to feedback or collaboration ideas!
 
-📬 Contact: <a href="mailto:jamse_yuan@163.com">_Jiahao Yuan_</a>
+📬 Contact me: <a href="mailto:jamse_yuan@163.com">_Jiahao Yuan_</a>
 
 ---
 
 ## 📖 Citation
 If you find our work useful for your research, please kindly cite our paper as follows:
 ```bibtex
-@misc{yuan2025moreenhancingstructuredmultiagent,
-      title={Less is More: Enhancing Structured Multi-Agent Reasoning via Quality-Guided Distillation}, 
-      author={Jiahao Yuan and Xingzhe Sun and Xing Yu and Jingwen Wang and Dehui Du and Zhiqing Cui and Zixiang Di},
-      year={2025},
-      eprint={2504.16408},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2504.16408}, 
+@article{yuan2025less,
+  title={LLMSR@XLLM25: Less is More: Enhancing Structured Multi-Agent Reasoning via Quality-Guided Distillation},
+  author={Yuan, Jiahao and Sun, Xingzhe and Yu, Xing and Wang, Jingwen and Du, Dehui and Cui, Zhiqing and Di, Zixiang},
+  journal={arXiv preprint arXiv:2504.16408},
+  year={2025}
+}
+
+@article{yuan2024reversal,
+  title={Reversal of Thought: Enhancing Large Language Models with Preference-Guided Reverse Reasoning Warm-up},
+  author={Yuan, Jiahao and Du, Dehui and Zhang, Hao and Di, Zixiang and Naseem, Usman},
+  journal={arXiv preprint arXiv:2410.12323},
+  year={2024}
 }
 ```
 
