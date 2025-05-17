@@ -21,8 +21,10 @@
 
 ---
 ## News
+- `2025.05.16` 🎉🎉🎉 Thrilled to share that our prior work [_Reversal of Thought_](https://arxiv.org/pdf/2410.12323) has been accepted to **ACL2025 Main**!
+- `2025.05.02` 🎉🎉🎉 Thrilled to share that our technical report [_Less is More_](https://arxiv.org/abs/2504.16408) has been accepted to the **LLMSR@XLLM ACL 2025 workshop**!
 - `2025.04.23` 🎉🎉🎉 Released **all source code** to the public.
-- `2025.04.23` 🎉🎉🎉 Published our short paper [_Less is More_](https://arxiv.org/abs/2504.16408).
+- `2025.04.23` 🎉🎉🎉 Published our technical report [_Less is More_](https://arxiv.org/abs/2504.16408).
 ---
 ## 🔍 Overview
 This repository provides the official full implementation of our ["Less is More: Enhancing Structured Multi-Agent Reasoning via Quality-Guided Distillation"](https://arxiv.org/abs/2504.16408) framework, which distills high-quality structured reasoning data into multi-agent LLaMA-3 modules. It addresses low-resource structured reasoning by combining:
