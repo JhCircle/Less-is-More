@@ -3,7 +3,7 @@
 <p align="center"> <strong>💌 Contact:</strong> <a href="mailto:jamse_yuan@163.com">jamse_yuan@163.com</a> </p>
 <div align="center">
 
-[![Paper](https://img.shields.io/badge/arXiv-2404.18400-b31b1b.svg)](https://arxiv.org/abs/2404.18400)
+[![Paper](https://img.shields.io/badge/arXiv-2504.16408-b31b1b.svg)](https://arxiv.org/abs/2504.16408)
 ![GitHub Repo stars](https://img.shields.io/github/stars/JhCircle/Less-is-More?style=social)
 
 </div>
