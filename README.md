@@ -21,10 +21,22 @@
 
 ---
 ## 🔥 News
-- `2025.05.16` 🎉🎉🎉 Thrilled to share that our prior work [_Reversal of Thought_](https://arxiv.org/pdf/2410.12323) has been accepted to **ACL2025 Main**!
-- `2025.05.02` 🎉🎉🎉 Thrilled to share that our technical report [_Less is More_](https://arxiv.org/abs/2504.16408) has been accepted to the **LLMSR@XLLM ACL 2025 workshop**!
-- `2025.04.23` 🎉🎉🎉 Released **all source code** to the public.
-- `2025.04.23` 🎉🎉🎉 Published our technical report [_Less is More_](https://arxiv.org/abs/2504.16408).
+- `2025.06.15` 🎉🎉🎉 We're thrilled to announce that our technical report [_Less is More_](https://arxiv.org/abs/2504.16408), which earned **3rd place**, has been officially accepted to the **LLMSR@XLLM ACL 2025 Workshop**!
+    <details>
+      <summary><strong>🖼️ Click to view our Less-is-more Poster (LLMSR@XLLM ACL 2025)</strong></summary>
+      <br>
+      <div align="center">
+        <img src="./asset/less_is_more_poster.png" alt="less_is_more Poster" width="60%">
+        <br><br>
+        <a href="./asset/less_is_more_poster.png" target="_blank">📄 Download PNG</a>
+      </div>
+      <br>
+    </details>
+- `2025.05.16` 🎉🎉🎉 Excited to share that our earlier work [_Reversal of Thought_](https://arxiv.org/pdf/2410.12323) has been accepted to **ACL2025 Main**!
+
+- `2025.05.01` 🎉🎉🎉 Honored to announce that our ECNU-Passion team won 🏆 3rd place in the [XLLM @ ACL 2025 Shared Task III: LLM for Structural Reasoning (LLM-SR)](https://xllms.github.io/LLMSR/)! 
+- `2025.04.23` 🎉🎉🎉 Released **all source code** 🔓 to the public to support transparency and reproducibility.
+- `2025.04.23` 🎉🎉🎉 Published our ECNU-Passion Team technical report 📄 [_Less is More_](https://arxiv.org/abs/2504.16408) based on our submission to the XLLM @ ACL 2025 Shared Task III. 
 ---
 ## 📖 Citation
 If you find our work useful for your research, please kindly cite our paper as follows:
